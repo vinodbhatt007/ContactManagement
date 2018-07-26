@@ -1,0 +1,108 @@
+﻿@model ContactManagement.WebAPI.Models.ContactDetailModel
+
+
+
+@{
+
+    ViewBag.Title = "Edit Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<link href="~/Content/ContactDetail.css" rel="stylesheet" />
+
+<div class="container">
+
+    @using (Html.BeginForm("Edit", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+
+    {
+        @*@Html.ValidationSummary(true)*@
+    <fieldset>
+
+        <h2>Edit Contacts</h2>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-9  text-center">
+                    <div class="col-md-3 text-right">
+                        @Html.LabelFor(model => model.FirstName)
+                    </div>
+                    <div class="col-md-6 text-left">
+                        @Html.TextBoxFor(model => model.FirstName, new { @class = "textBox" })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-9  text-center">
+                    <div class="col-md-3 text-right">
+                        @Html.LabelFor(model => model.LastName)
+                    </div>
+                    <div class="col-md-6 text-left">
+                        @Html.TextBoxFor(model => model.LastName, new { @class = "textBox" })
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-9  text-center">
+                    <div class="col-md-3 text-right">
+                        @Html.LabelFor(model => model.Email)
+                    </div>
+                    <div class="col-md-6 text-left">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "textBox" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-9  text-center">
+                    <div class="col-md-3 text-right">
+                        @Html.LabelFor(model => model.PhoneNumber)
+                    </div>
+                    <div class="col-md-6 text-left">
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "textBox" })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-9  text-center">
+                    <div class="col-md-3 text-right">
+                        @Html.Label("Active")
+                    </div>
+                    <div class="col-md-6 text-left">
+                        @Html.CheckBoxFor(model => model.Status)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </fieldset>
+
+        <div class="form-actions">
+            @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-danger" })
+            <button type="submit" class="btn btn-primary">Save <span class="glyphicon glyphicon-plus-sign"></span></button>
+        </div>
+
+    }
+
+</div>
