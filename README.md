@@ -18,7 +18,7 @@ Bootstrap
 
 3. Change Connection String in ContactManagement.WebAPI.web.config and ContactManagement.DataContract.App.Config file
 
-4. Run the solution
+4. Build and Run the solution
 
 Note: For 1st Run, new database will be created in local database server
 
