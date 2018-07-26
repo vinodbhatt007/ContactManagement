@@ -2,11 +2,7 @@
 Project Exercise
 
 # Technologies Used:
-ASP.NET MVC and WEBAPI 
-REST
-Generic Repository Pattern 
-Unit of Work 
-Bootstrap
+ASP.NET MVC and WEBAPI, Entity Framework, REST, Generic Repository Pattern , Unit of Work , Bootstrap
 
 
 
